@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splashlogo</item>
+        <item name="windowSplashScreenBackground">#BB1020</item>
+        <item name="postSplashScreenTheme">@style/Theme.Pexels</item>
+        <item name="windowSplashScreenIconBackgroundColor">#BB1020</item>
+    </style>
+</resources>
