@@ -15,10 +15,10 @@ data class Photo(
     val alt: String = "",
     val avg_color: String = "",
     val height: Int = 0,
-    val id: Long = 0L,                 // <- change to Long
+    val id: Long = 0L,
     val liked: Boolean = false,
     val photographer: String = "",
-    val photographer_id: Long = 0L,    // <- change to Long
+    val photographer_id: Long = 0L,
     val photographer_url: String = "",
     val src: Src = Src(),
     val url: String = "",

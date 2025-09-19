@@ -58,7 +58,6 @@ class FileDownloadWorkManager @AssistedInject constructor(
         return try {
             val uri = saveFile(fileName, fileType, fileUrl, appContext)
 
-            // Update notification on success
             notificationBuilder
                 .setContentTitle("Download complete")
                 .setOngoing(false)
@@ -70,7 +69,6 @@ class FileDownloadWorkManager @AssistedInject constructor(
         } catch (e: Exception) {
             e.printStackTrace()
 
-            // Update notification on failure
             notificationBuilder
                 .setContentTitle("Download failed")
                 .setOngoing(false)

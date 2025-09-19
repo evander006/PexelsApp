@@ -146,7 +146,7 @@ fun BookmarkedPhotoItem(photo: Photo, onClick: (photo: Photo) -> Unit) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .align(Alignment.BottomCenter)
-                    .background(Color(0x80000000)) // чёрный с прозрачностью
+                    .background(Color(0x80000000))
                     .padding(vertical = 8.dp, horizontal = 12.dp)
             ) {
                 Text(

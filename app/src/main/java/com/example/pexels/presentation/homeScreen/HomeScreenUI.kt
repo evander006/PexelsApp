@@ -63,18 +63,18 @@ fun HomeScreenUI(
     Column {
         SearchBar(
             modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp),
-            shape = RoundedCornerShape(50.dp), // rounded corners
+            shape = RoundedCornerShape(50.dp),
             colors = SearchBarDefaults.colors(
-                containerColor = Color(0xFFF3F5F9), // background
+                containerColor = Color(0xFFF3F5F9),
                 dividerColor = Color.Transparent,
                 inputFieldColors = SearchBarDefaults.inputFieldColors(
                     focusedTextColor = Color.Black,
                     unfocusedTextColor = Color.Black,
                     disabledTextColor = Color.Black,
                     cursorColor = Color.Black,
-                    focusedLeadingIconColor = Color(0xFFBB1020),   // search icon color
+                    focusedLeadingIconColor = Color(0xFFBB1020),
                     unfocusedLeadingIconColor = Color(0xFFBB1020),
-                    focusedPlaceholderColor = Color(0xFF868686),   // hint color
+                    focusedPlaceholderColor = Color(0xFF868686),
                     unfocusedPlaceholderColor = Color(0xFF868686)
                 )
             ),
@@ -93,14 +93,14 @@ fun HomeScreenUI(
             placeholder = {
                 Text(
                     text = "Search",
-                    color = Color(0xFF868686) // hint color
+                    color = Color(0xFF868686)
                 )
             },
             leadingIcon = {
                 Icon(
                     imageVector = Icons.Default.Search,
                     contentDescription = "Search",
-                    tint = Color(0xFFBB1020) // search icon color
+                    tint = Color(0xFFBB1020)
                 )
             }
         ) {

@@ -98,7 +98,7 @@ fun DetailScreenUI(photo: Photo?, downloadViewModel: DetailScreenViewModel= hilt
 
                 ) {
                     Row(
-                        horizontalArrangement = Arrangement.SpaceEvenly,
+                        horizontalArrangement = Arrangement.Start,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(
@@ -106,9 +106,10 @@ fun DetailScreenUI(photo: Photo?, downloadViewModel: DetailScreenViewModel= hilt
                             tint = Color.Unspecified,
                             contentDescription = "Download"
                         )
-                        Spacer(Modifier.width(8.dp))
+                        Spacer(Modifier.width(4.dp))
                         Text("Download", color = Color(0xFF1E1E1E))
                     }
+
                 }
                 photo?.let {
                     IconButton(onClick = {
