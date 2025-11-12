@@ -19,6 +19,7 @@ android {
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -39,6 +40,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
 
     buildFeatures {
         compose = true
@@ -92,4 +94,7 @@ dependencies {
     // WorkManager + Hilt
     implementation("androidx.work:work-runtime-ktx:2.10.4")
     implementation("androidx.hilt:hilt-work:1.3.0")
+    //paging3
+    implementation("androidx.paging:paging-runtime:3.3.6")
+    implementation("androidx.paging:paging-compose:3.3.6")
 }
