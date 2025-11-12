@@ -30,6 +30,9 @@ import com.example.pexels.presentation.homeScreen.HomeScreenUI
 
 @Composable
 fun BottomNavigationBar(paddingValues: PaddingValues) {
+    var navigationSelectedItem by remember {
+        mutableStateOf(0)
+    }
     val navController= rememberNavController()
     val backStackEntry=navController.currentBackStackEntryAsState()
     val currDestination=backStackEntry.value?.destination?.route
@@ -41,8 +44,9 @@ fun BottomNavigationBar(paddingValues: PaddingValues) {
             NavigationBar(containerColor = Color.White) {
                 BottomNavigationItem().getNavigationItems().forEachIndexed { ind, item->
                     NavigationBarItem(
-                        selected = currDestination==item.route,
+                        selected = ind==navigationSelectedItem,
                         onClick = {
+                            navigationSelectedItem=ind
                             navController.navigate(item.route){
                                 popUpTo(navController.graph.findStartDestination().id){
                                     saveState=true
@@ -52,7 +56,7 @@ fun BottomNavigationBar(paddingValues: PaddingValues) {
                             }
                         },
                         icon = {
-                            val iconRes=if (currDestination==item.route) item.activeicon else item.inactiveicon
+                            val iconRes=if (ind==navigationSelectedItem) item.activeicon else item.inactiveicon
                             Icon(painterResource(iconRes),null,tint = Color.Unspecified)
                         },
                         colors = NavigationBarItemDefaults.colors(
